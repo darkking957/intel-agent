@@ -9,3 +9,15 @@
 2026-05-21 17:00:32 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
 2026-05-21 17:00:34 | INFO     | intel_agent.llm.client | LLM call completed | prompt=24  completion=39  total=63
 2026-05-21 17:00:34 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 21:58:32 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 21:58:33 | INFO     | intel_agent.llm.client | LLM call completed | prompt=763  completion=94  total=857
+2026-05-21 21:58:34 | INFO     | intel_agent.pipeline.scorer | Scored article: [9/10] LangGraph 1.0: Production-Ready Agent Orchestratio
+2026-05-21 21:58:34 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 21:58:34 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 21:58:35 | INFO     | intel_agent.llm.client | LLM call completed | prompt=763  completion=92  total=855
+2026-05-21 21:58:35 | INFO     | intel_agent.pipeline.scorer | Scored article: [9/10] LangGraph 1.0: Production-Ready Agent Orchestratio
+2026-05-21 21:58:35 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-21 21:58:35 | INFO     | intel_agent.llm.client | LLM call completed | prompt=751  completion=65  total=816
+2026-05-21 21:58:35 | INFO     | intel_agent.pipeline.scorer | Scored article: [2/10] 10 ChatGPT Prompts to Write Better Emails
+2026-05-21 21:58:36 | INFO     | intel_agent.llm.client | LLM call completed | prompt=746  completion=79  total=825
+2026-05-21 21:58:36 | INFO     | intel_agent.pipeline.scorer | Scored article: [9/10] Scaling Laws for Reasoning in Large Language Model
