@@ -44,7 +44,7 @@ FEW_SHOT_EXAMPLES = """
 def build_system_prompt(interest_profile: str = "") -> str:
     """
     构建 system prompt。
-    interest_profile：从用户历史 like 行为中提取的兴趣关键词（Day 9 实现）
+    interest_profile：从用户历史 like 行为中提取的兴趣关键词
     """
     schema = ArticleScore.model_json_schema()
     interest_section = (

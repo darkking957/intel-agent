@@ -21,3 +21,22 @@
 2026-05-21 21:58:35 | INFO     | intel_agent.pipeline.scorer | Scored article: [2/10] 10 ChatGPT Prompts to Write Better Emails
 2026-05-21 21:58:36 | INFO     | intel_agent.llm.client | LLM call completed | prompt=746  completion=79  total=825
 2026-05-21 21:58:36 | INFO     | intel_agent.pipeline.scorer | Scored article: [9/10] Scaling Laws for Reasoning in Large Language Model
+2026-05-26 17:10:00 | INFO     | intel_agent.tools.registry | registered tool: fetch_rss
+2026-05-26 17:10:23 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-26 17:12:19 | INFO     | intel_agent.tools.registry | registered tool: fetch_rss
+2026-05-26 17:12:22 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-26 17:15:36 | INFO     | intel_agent.tools.registry | registered tool: fetch_rss
+2026-05-26 17:15:39 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 17:15:41 | INFO     | intel_agent.tools.rss_tool | Fetched 10 articles from https://news.ycombinator.com/rss
+2026-05-26 17:15:41 | INFO     | intel_agent.llm.tool_loop | Tool fetch_rss called, result length: 2994
+2026-05-26 17:15:41 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 17:15:45 | INFO     | intel_agent.llm.tool_loop | Tool loop completed in 2 iterations
+2026-05-26 17:21:10 | INFO     | intel_agent.tools.registry | registered tool: fetch_rss
+2026-05-26 17:21:13 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 17:21:15 | WARNING  | intel_agent.tools.rss_tool | RSS parse failed for https://rss.arxiv.org/rss/cs.AI: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>
+2026-05-26 17:21:15 | INFO     | intel_agent.llm.tool_loop | Tool fetch_rss called, result length: 2
+2026-05-26 17:21:15 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 17:21:18 | WARNING  | intel_agent.tools.rss_tool | RSS parse failed for http://export.arxiv.org/rss/cs.AI: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>
+2026-05-26 17:21:18 | INFO     | intel_agent.llm.tool_loop | Tool fetch_rss called, result length: 2
+2026-05-26 17:21:19 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 17:21:21 | INFO     | intel_agent.llm.tool_loop | Tool loop completed in 3 iterations
