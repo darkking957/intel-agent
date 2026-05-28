@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     langsmith_project: str = "intel-agent"
 
     # 数据库
-    database_url: str = "postgresql://postgres:secret@localhost:5432/intel"
+    database_url: str = Field(..., description="数据库连接串，必填")
 
     # 应用配置
     log_level: str = "INFO"

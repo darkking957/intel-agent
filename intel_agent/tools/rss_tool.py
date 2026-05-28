@@ -1,6 +1,7 @@
 """fetch_rss 工具：抓取 RSS Feed，返回文章列表"""
 import feedparser
 import asyncio
+import httpx
 import logging
 from pydantic import BaseModel, Field, HttpUrl
 from intel_agent.tools.registry import ToolDefinition, registry
@@ -17,11 +18,19 @@ async def fetch_rss_impl(url: str, limit: int=20) -> list[dict]:
     feedparser 是同步库，用 run_in_executor 避免阻塞事件循环
     """
 
-    loop = asyncio.get_running_loop()
-    feed = await asyncio.wait_for(
-        loop.run_in_executor(None, feedparser.parse, url),
-        timeout=10.0
-    )
+    async with httpx.AsyncClient(timeout=10.0, follow_redirects=True,) as client:
+        try:
+            resp = await client.get(url)
+            resp.raise_for_status()
+        except httpx.HTTPStatusError as e:
+            logger.warning(f"HTTP error for {url}: {e.response.status_code}")
+            return []
+        except httpx.RequestError as e:
+            logger.warning(f"Request failed for {url}: {e}")
+            return []
+
+    feed = feedparser.parse(resp.text)
+    
     if feed.bozo and not feed.entries:
         logger.warning(f"RSS parse failed for {url}: {feed.bozo_exception}")
         return []

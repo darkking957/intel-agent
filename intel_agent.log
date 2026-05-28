@@ -40,3 +40,25 @@
 2026-05-26 17:21:18 | INFO     | intel_agent.llm.tool_loop | Tool fetch_rss called, result length: 2
 2026-05-26 17:21:19 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
 2026-05-26 17:21:21 | INFO     | intel_agent.llm.tool_loop | Tool loop completed in 3 iterations
+2026-05-26 19:59:26 | INFO     | intel_agent.tools.registry | registered tool: fetch_rss
+2026-05-26 19:59:28 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 19:59:31 | INFO     | httpx | HTTP Request: GET https://rss.arxiv.org/rss/cs.AI "HTTP/1.1 200 OK"
+2026-05-26 19:59:33 | INFO     | intel_agent.tools.rss_tool | Fetched 20 articles from https://rss.arxiv.org/rss/cs.AI
+2026-05-26 19:59:33 | INFO     | intel_agent.llm.tool_loop | Tool fetch_rss called, result length: 15125
+2026-05-26 19:59:33 | INFO     | httpx | HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 19:59:38 | INFO     | intel_agent.llm.tool_loop | Tool loop completed in 2 iterations
+2026-05-28 16:40:29 | INFO     | intel_agent.store.db | Database connection pool created
+2026-05-28 16:40:30 | INFO     | intel_agent.store.article_repo | Inserted article: https://test.example.com/article/db-test-001
+2026-05-28 16:40:36 | INFO     | intel_agent.store.db | Database connection pool closed
+2026-05-28 16:41:32 | INFO     | intel_agent.store.db | Database connection pool created
+2026-05-28 16:41:33 | INFO     | intel_agent.store.article_repo | Inserted article: https://test.example.com/article/db-test-001
+2026-05-28 16:41:39 | INFO     | intel_agent.store.db | Database connection pool closed
+2026-05-28 16:42:05 | INFO     | intel_agent.store.db | Database connection pool created
+2026-05-28 16:42:06 | INFO     | intel_agent.store.article_repo | Inserted article: https://test.example.com/article/db-test-001
+2026-05-28 16:42:12 | INFO     | intel_agent.store.db | Database connection pool closed
+2026-05-28 16:43:37 | INFO     | intel_agent.store.db | Database connection pool created
+2026-05-28 16:43:38 | INFO     | intel_agent.store.article_repo | Inserted article: https://test.example.com/article/db-test-001
+2026-05-28 16:43:41 | INFO     | intel_agent.store.db | Database connection pool closed
+2026-05-28 16:46:53 | INFO     | intel_agent.store.db | Database connection pool created
+2026-05-28 16:46:54 | INFO     | intel_agent.store.article_repo | Inserted article: https://test.example.com/article/db-test-001
+2026-05-28 16:47:00 | INFO     | intel_agent.store.db | Database connection pool closed
